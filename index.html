@@ -49,22 +49,23 @@
       ]
     }
     </script>
-    <title>NB Premium Engineering Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" as="video"
+        href="assets/images/SnapInsta.to_AQNQQXxNVJCr_lfL0glCSn1iz7LcjPy5KsHzgtH-qfnXU9VFl97UD8jItR6HGgkS7Ckksr-Psgeh0DD0PXT1kRXc.mp4">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
     <style>
-        /* Global Styles */
         :root {
             --primary-color: #C2541A;
-            /* Improved contrast ratio for accessibility */
             --secondary-color: #003594;
-            /* Branding Blue */
             --accent-red: #CC0000;
-            /* diypowers inspired accent */
             --dark-gray: #1a1a1a;
             --medium-gray: #595959;
-            /* Improved from #666 for better contrast */
             --light-gray: #f4f7f6;
             --white: #FFFFFF;
             --text-color: #333;
@@ -135,7 +136,6 @@
             color: var(--white);
             padding: 14px 32px;
             border-radius: 4px;
-            /* More industrial square look */
             text-decoration: none;
             font-weight: 700;
             text-transform: uppercase;
@@ -169,7 +169,6 @@
             margin-bottom: 50px;
         }
 
-        /* Header Styles */
         header {
             background: transparent;
             position: fixed;
@@ -262,13 +261,11 @@
             color: #000;
         }
 
-        /* Hero Section */
         .hero {
             position: relative;
             color: var(--white);
             text-align: center;
             padding: 200px 0 100px;
-            /* Increased top padding to account for header */
             overflow: hidden;
         }
 
@@ -331,7 +328,6 @@
             font-weight: 400;
         }
 
-        /* About Section */
         .about {
             background-color: var(--white);
         }
@@ -367,11 +363,11 @@
 
         .about-image img {
             width: 100%;
+            height: auto;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* Services Section */
         .services {
             background-color: var(--light-gray);
         }
@@ -421,7 +417,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* Products Section */
         .products {
             background-color: var(--white);
             padding: 100px 0;
@@ -508,7 +503,6 @@
             text-transform: uppercase;
         }
 
-        /* Partners Section */
         .partners {
             display: flex;
             justify-content: center;
@@ -533,7 +527,6 @@
             transform: scale(1.05);
         }
 
-        /* Why Choose Us Section */
         .why-choose-us {
             background-color: var(--light-gray);
         }
@@ -570,7 +563,6 @@
             margin-bottom: 15px;
         }
 
-        /* Process Section */
         .process {
             background-color: var(--light-gray);
             padding: 100px 0;
@@ -641,7 +633,6 @@
             font-weight: 400;
         }
 
-        /* Clients Section */
         .clients {
             background-color: var(--light-gray);
         }
@@ -673,7 +664,6 @@
             max-width: 100%;
         }
 
-        /* Gallery Section */
         .gallery {
             background-color: var(--white);
             padding: 100px 0;
@@ -726,7 +716,6 @@
             opacity: 1;
         }
 
-        /* Contact Section */
         .contact {
             background-color: var(--light-gray);
             padding: 100px 0;
@@ -830,7 +819,6 @@
             display: block;
         }
 
-        /* Footer */
         footer {
             background-color: var(--dark-gray);
             color: var(--white);
@@ -854,7 +842,6 @@
 
         .footer-col p {
             color: #ddd;
-            /* Improved from #999 for better contrast */
             font-size: 0.9rem;
         }
 
@@ -868,7 +855,6 @@
 
         .footer-col ul li a {
             color: #ccc;
-            /* Improved from #999 for better contrast */
             text-decoration: none;
             transition: var(--transition);
             font-size: 0.9rem;
@@ -885,11 +871,9 @@
             padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #ccc;
-            /* Improved from #666 for better contrast on dark */
             font-size: 0.85rem;
         }
 
-        /* Reveal Animations */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -901,8 +885,7 @@
             transform: translateY(0);
         }
 
-        /* Responsive Styles */
-        @media (max-width: 992px) {
+        @media (max-width:992px) {
 
             .about-content,
             .contact-container {
@@ -933,7 +916,7 @@
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width:768px) {
             .header-container {
                 flex-direction: column;
                 text-align: center;
@@ -980,8 +963,6 @@
             }
         }
 
-        /* Fixed Social Buttons */
-        /* Fixed Side Contact Bar */
         .fixed-sidebar {
             position: fixed;
             right: 0;
@@ -1033,8 +1014,6 @@
         .fixed-sidebar a.instagram:hover {
             background-color: #E4405F;
         }
-
-        /* Removed Scroll Background Styles */
     </style>
 </head>
 
@@ -1120,7 +1099,8 @@
                 </div>
                 <div class="about-image">
                     <img src="assets/images/diy_power_customized.jpg"
-                        alt="NB Premium engineering team at work on a customized power solution" loading="lazy">
+                        alt="NB Premium engineering team at work on a customized power solution" loading="lazy"
+                        width="600" height="400">
                 </div>
             </div>
         </div>
@@ -1174,11 +1154,13 @@
             <h2>Our Products & Partners</h2>
             <div class="partners">
                 <img src="assets/images/KOHLER-SDMO-Logo.jpg" alt="Partner: Kohler SDMO" class="partner-logo"
-                    loading="lazy">
+                    loading="lazy" width="150" height="45">
                 <img src="assets/images/CCEC_Cummins.png" alt="Partner: CCEC Cummins" class="partner-logo"
-                    loading="lazy">
-                <img src="assets/images/Perkins.png" alt="Partner: Perkins" class="partner-logo" loading="lazy">
-                <img src="assets/images/diy_logo.png" alt="Partner: DIY" class="partner-logo" loading="lazy">
+                    loading="lazy" width="150" height="45">
+                <img src="assets/images/Perkins.png" alt="Partner: Perkins" class="partner-logo" loading="lazy"
+                    width="150" height="45">
+                <img src="assets/images/diy_logo.png" alt="Partner: DIY" class="partner-logo" loading="lazy" width="150"
+                    height="45">
             </div>
 
             <div class="product-tabs">
@@ -1193,7 +1175,7 @@
                 <div class="product-card" data-category="generators">
                     <div class="product-image">
                         <img src="assets/images/Diesel_Generators.webp" alt="High-capacity Diesel Generator set"
-                            loading="lazy">
+                            loading="lazy" width="400" height="250">
                     </div>
                     <div class="product-info">
                         <h3>Diesel Generators</h3>
@@ -1207,7 +1189,7 @@
                 <div class="product-card" data-category="generators">
                     <div class="product-image">
                         <img src="assets/images/gen_set.jpeg" alt="Industrial Gen Sets for premium power backup"
-                            loading="lazy">
+                            loading="lazy" width="400" height="250">
                     </div>
                     <div class="product-info">
                         <h3>Premium Gen Sets</h3>
@@ -1222,7 +1204,7 @@
                 <div class="product-card" data-category="accessories">
                     <div class="product-image">
                         <img src="assets/images/generator-parts-and-accessories.jpg"
-                            alt="Essential generator parts and accessories" loading="lazy">
+                            alt="Essential generator parts and accessories" loading="lazy" width="400" height="250">
                     </div>
                     <div class="product-info">
                         <h3>Generator Accessories</h3>
@@ -1237,7 +1219,8 @@
                 <div class="product-card" data-category="panels">
                     <div class="product-image">
                         <img src="assets/images/Industrial_Panels.jpeg"
-                            alt="Custom-designed heavy-duty Industrial Control Panel" loading="lazy">
+                            alt="Custom-designed heavy-duty Industrial Control Panel" loading="lazy" width="400"
+                            height="250">
                     </div>
                     <div class="product-info">
                         <h3>Industrial Panels</h3>
@@ -1333,28 +1316,31 @@
             <h2>Our Clients</h2>
             <div class="clients-grid">
                 <div class="client-logo">
-                    <img src="assets/images/cbi.webp" alt="CBI Ghana">
+                    <img src="assets/images/cbi.webp" alt="CBI Ghana" loading="lazy" width="120" height="80">
                 </div>
                 <div class="client-logo">
-                    <img src="assets/images/JW_Logo.svg.png" alt="JW.ORG">
+                    <img src="assets/images/JW_Logo.svg.png" alt="JW.ORG" loading="lazy" width="120" height="80">
                 </div>
                 <div class="client-logo">
-                    <img src="assets/images/french_embassy.png" alt="French Embassy">
+                    <img src="assets/images/french_embassy.png" alt="French Embassy" loading="lazy" width="120"
+                        height="80">
                 </div>
                 <div class="client-logo">
-                    <img src="assets/images/Touton.jpg" alt="CHT Touton">
+                    <img src="assets/images/Touton.jpg" alt="CHT Touton" loading="lazy" width="120" height="80">
                 </div>
                 <div class="client-logo">
-                    <img src="assets/images/Saint-Gobain_logo.svg.png" alt="Saint-Gobain">
+                    <img src="assets/images/Saint-Gobain_logo.svg.png" alt="Saint-Gobain" loading="lazy" width="120"
+                        height="80">
                 </div>
                 <div class="client-logo">
-                    <img src="assets/images/tricord_logo.avif" alt="Tricord">
+                    <img src="assets/images/tricord_logo.avif" alt="Tricord" loading="lazy" width="120" height="80">
                 </div>
                 <div class="client-logo">
-                    <img src="assets/images/zenith.png" alt="Zenith Bank">
+                    <img src="assets/images/zenith.png" alt="Zenith Bank" loading="lazy" width="120" height="80">
                 </div>
                 <div class="client-logo">
-                    <img src="assets/images/diamond-cement-ghana-limited_logo.jpg" alt="Diamond Cement">
+                    <img src="assets/images/diamond-cement-ghana-limited_logo.jpg" alt="Diamond Cement" loading="lazy"
+                        width="120" height="80">
                 </div>
             </div>
         </div>
@@ -1366,73 +1352,83 @@
             <h2>Project Gallery</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="assets/images/service_by_nbpes.jpg" alt="NB Premium Engineering Services">
+                    <img src="assets/images/service_by_nbpes.jpg" alt="NB Premium Engineering Services" loading="lazy"
+                        width="400" height="300">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/servicing_of_gen.webp" alt="Generator Servicing">
+                    <img src="assets/images/servicing_of_gen.webp" alt="Generator Servicing" loading="lazy" width="400"
+                        height="300">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/install_kohler_genset.jpg" alt="Kohler Generator Installation">
+                    <img src="assets/images/install_kohler_genset.jpg" alt="Kohler Generator Installation"
+                        loading="lazy" width="400" height="300">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/nbpes_services_generator.webp" alt="Generator Services">
+                    <img src="assets/images/nbpes_services_generator.webp" alt="Generator Services" loading="lazy"
+                        width="400" height="300">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/diy_power_customized.jpg" alt="Customized Power Solutions">
+                    <img src="assets/images/diy_power_customized.jpg" alt="Customized Power Solutions" loading="lazy"
+                        width="400" height="300">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/gen_set.jpeg" alt="Generator set">
+                    <img src="assets/images/gen_set.jpeg" alt="Generator set" loading="lazy" width="400" height="300">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/nbpes_staff_on_site.jpeg" alt="Staff">
+                    <img src="assets/images/nbpes_staff_on_site.jpeg" alt="Staff" loading="lazy" width="400"
+                        height="300">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/new_gen_set.jpeg" alt="Generator Set">
+                    <img src="assets/images/new_gen_set.jpeg" alt="Generator Set" loading="lazy" width="400"
+                        height="300">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/Industrial_Panels.jpeg" alt="Industrial Control Panels">
+                    <img src="assets/images/Industrial_Panels.jpeg" alt="Industrial Control Panels" loading="lazy"
+                        width="400" height="300">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/Kohler_SDMO.webp" alt="Generator">
+                    <img src="assets/images/Kohler_SDMO.webp" alt="Generator" loading="lazy" width="400" height="300">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/mobile_gen_set.jpg" alt="Mobile Generator Set">
+                    <img src="assets/images/mobile_gen_set.jpg" alt="Mobile Generator Set" loading="lazy" width="400"
+                        height="300">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/diy_power_gen_set.jpg" alt="DIY Generator Set">
+                    <img src="assets/images/diy_power_gen_set.jpg" alt="DIY Generator Set" loading="lazy" width="400"
+                        height="300">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
