@@ -56,14 +56,15 @@
     <style>
         /* Global Styles */
         :root {
-            --primary-color: #E6702E;
-            /* Branding Orange */
+            --primary-color: #C2541A;
+            /* Improved contrast ratio for accessibility */
             --secondary-color: #003594;
             /* Branding Blue */
             --accent-red: #CC0000;
             /* diypowers inspired accent */
             --dark-gray: #1a1a1a;
-            --medium-gray: #666;
+            --medium-gray: #595959;
+            /* Improved from #666 for better contrast */
             --light-gray: #f4f7f6;
             --white: #FFFFFF;
             --text-color: #333;
@@ -852,7 +853,8 @@
         }
 
         .footer-col p {
-            color: #999;
+            color: #ddd;
+            /* Improved from #999 for better contrast */
             font-size: 0.9rem;
         }
 
@@ -865,7 +867,8 @@
         }
 
         .footer-col ul li a {
-            color: #999;
+            color: #ccc;
+            /* Improved from #999 for better contrast */
             text-decoration: none;
             transition: var(--transition);
             font-size: 0.9rem;
@@ -880,8 +883,9 @@
             text-align: center;
             margin-top: 60px;
             padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: #666;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            /* Improved from #666 for better contrast on dark */
             font-size: 0.85rem;
         }
 
@@ -1041,8 +1045,8 @@
             <div class="logo">
                 <h1>NB PREMIUM</h1>
             </div>
-            <button class="mobile-menu-btn" id="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
+            <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
             <nav>
                 <ul class="nav-menu" id="nav-menu">
@@ -1060,24 +1064,27 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <video autoplay muted loop>
-            <source
-                src="assets/images/SnapInsta.to_AQNQQXxNVJCr_lfL0glCSn1iz7LcjPy5KsHzgtH-qfnXU9VFl97UD8jItR6HGgkS7Ckksr-Psgeh0DD0PXT1kRXc.mp4"
-                type="video/mp4">
-        </video>
-        <div class="container">
-            <h2>NB Premium Engineering Services</h2>
-            <p>Your trusted partner for reliable power solutions and engineering services</p>
-            <div class="action-buttons">
-                <a href="#contact" class="btn">Get a Quote</a>
-                <a href="assets/document/NB_PREMIUM_ENGINEERING_SERVICES.pdf" class="btn btn-outline" download>
-                    <i class="fas fa-download"></i> Download Brochure
-                </a>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <video autoplay muted loop playsinline aria-label="Background video showing industrial engineering works">
+                <source
+                    src="assets/images/SnapInsta.to_AQNQQXxNVJCr_lfL0glCSn1iz7LcjPy5KsHzgtH-qfnXU9VFl97UD8jItR6HGgkS7Ckksr-Psgeh0DD0PXT1kRXc.mp4"
+                    type="video/mp4">
+            </video>
+            <div class="container">
+                <h2>NB Premium Engineering Services</h2>
+                <p>Your trusted partner for reliable power solutions and engineering services</p>
+                <div class="action-buttons">
+                    <a href="#contact" class="btn">Get a Quote</a>
+                    <a href="assets/document/NB_PREMIUM_ENGINEERING_SERVICES.pdf" class="btn btn-outline" download
+                        aria-label="Download Company Brochure">
+                        <i class="fas fa-download" aria-hidden="true"></i> Download Brochure
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- About Section -->
     <section class="about" id="about">
@@ -1459,8 +1466,10 @@
                         <p><i class="fas fa-envelope"></i> Sales@nbpes.com</p>
                     </div>
                     <div class="social-links">
-                        <a href="https://web.facebook.com/Nb.premiumengineering/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/nbpes_official/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://web.facebook.com/Nb.premiumengineering/" aria-label="Facebook"><i
+                                class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/nbpes_official/" aria-label="Instagram"><i
+                                class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -1549,17 +1558,20 @@
 
     <!-- Fixed Side Contact Bar -->
     <div class="fixed-sidebar">
-        <a href="https://wa.me/233508900903/" class="whatsapp" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/233508900903/" class="whatsapp" target="_blank" rel="noopener"
+            aria-label="Contact us on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
         </a>
-        <a href="https://web.facebook.com/Nb.premiumengineering/" class="facebook" target="_blank" rel="noopener">
-            <i class="fab fa-facebook-f"></i>
+        <a href="https://web.facebook.com/Nb.premiumengineering/" class="facebook" target="_blank" rel="noopener"
+            aria-label="Visit our Facebook page">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
         </a>
-        <a href="https://www.instagram.com/nbpes_official/" class="instagram" target="_blank" rel="noopener">
-            <i class="fab fa-instagram"></i>
+        <a href="https://www.instagram.com/nbpes_official/" class="instagram" target="_blank" rel="noopener"
+            aria-label="Follow us on Instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
         </a>
-        <a href="mailto:Sales@nbpes.com" class="email">
-            <i class="fa fa-envelope"></i>
+        <a href="mailto:Sales@nbpes.com" class="email" aria-label="Send us an email">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
         </a>
     </div>
 
