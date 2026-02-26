@@ -24,10 +24,17 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       
+      - name: Prepare Deployment
+        run: |
+          mkdir -p public
+          cp -r index.html assets robots.txt sitemap.xml public/
+          [ -f CNAME ] && cp CNAME public/ || echo "No CNAME found"
+          touch public/.nojekyll
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."
+          path: "./public"
   
   deploy:
     environment:
