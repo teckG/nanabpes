@@ -1030,6 +1030,126 @@
         .fixed-sidebar a.instagram:hover {
             background-color: #E4405F
         }
+
+        /* Carousel Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(8px);
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .modal-image {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transform: scale(0.95);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .modal.active .modal-image {
+            transform: scale(1);
+        }
+
+        .modal-caption {
+            color: var(--white);
+            margin-top: 20px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            color: var(--primary-color);
+            transform: rotate(90deg);
+        }
+
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-nav:hover {
+            background: var(--primary-color);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .modal-prev {
+            left: -80px;
+        }
+
+        .modal-next {
+            right: -80px;
+        }
+
+        @media (max-width: 1100px) {
+            .modal-prev {
+                left: 10px;
+            }
+
+            .modal-next {
+                right: 10px;
+            }
+
+            .modal-close {
+                top: 10px;
+                right: 10px;
+                z-index: 2001;
+            }
+        }
+
+        .gallery-item {
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -1038,7 +1158,7 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <h1>NB PREMIUM</h1>
+                <h1>NBPES</h1>
             </div>
             <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation">
                 <i class="fas fa-bars" aria-hidden="true"></i>
@@ -1457,9 +1577,104 @@
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
+                <!-- New Images Added 2026-03-01 -->
+                <div class="gallery-item">
+                    <img src="assets/images/gen-set-filling.jpeg" alt="Generator Filling" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gen-set-fuelling.jpeg" alt="Generator Fuelling" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gen-set-install.jpeg" alt="Generator Installation" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gen-set-installed.jpeg" alt="Generator Installed" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gen-set-on-a-wheel-overview.jpeg" alt="Mobile Generator Overview"
+                        loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gen-set-on-a-wheel-side.jpeg" alt="Mobile Generator Side View"
+                        loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gen-set-on-a-wheel-sideview.jpeg" alt="Mobile Generator Side"
+                        loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gen-set-on-a-wheel.jpeg" alt="Mobile Generator" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gen-set-testing.jpeg" alt="Generator Testing" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/genset-in-a-container.jpeg" alt="Generator in Container" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/kohler-sdmo-blue-crane-lift-1.jpeg" alt="Kohler Crane Lift 1"
+                        loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/kohler-sdmo-blue-crane-lift-2.jpeg" alt="Kohler Crane Lift 2"
+                        loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/kohler-sdmo-blue-crane-lift-3.jpeg" alt="Kohler Crane Lift 3"
+                        loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/kohler-sdmo-blue-crane-lift.jpeg" alt="Kohler Crane Lift" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/kohler-sdmo-blue-crane.jpeg" alt="Kohler Crane" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/kohler-sdmo-blue-installing.jpeg" alt="Kohler Installation" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/kohler-sdmo-blue-stationed.jpeg" alt="Kohler Stationed" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/kohler-sdmo-blue.jpeg" alt="Kohler SDMO Blue" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/kohler-sdmo-white-warehouse.jpeg" alt="Kohler White Warehouse"
+                        loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Carousel Modal -->
+    <div class="modal" id="carousel-modal">
+        <span class="modal-close" id="modal-close">&times;</span>
+        <button class="modal-nav modal-prev" id="modal-prev"><i class="fas fa-chevron-left"></i></button>
+        <div class="modal-content">
+            <img src="" alt="" class="modal-image" id="modal-image">
+            <p class="modal-caption" id="modal-caption"></p>
+        </div>
+        <button class="modal-nav modal-next" id="modal-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
@@ -1729,6 +1944,80 @@
         document.querySelectorAll('section').forEach(section => {
             section.classList.add('reveal');
             revealObserver.observe(section);
+        });
+
+        // Carousel Modal Logic
+        const modal = document.getElementById('carousel-modal');
+        const modalImg = document.getElementById('modal-image');
+        const modalCaption = document.getElementById('modal-caption');
+        const modalClose = document.getElementById('modal-close');
+        const modalPrev = document.getElementById('modal-prev');
+        const modalNext = document.getElementById('modal-next');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        let currentIndex = 0;
+        const images = Array.from(galleryItems).map(item => ({
+            src: item.querySelector('img').src,
+            alt: item.querySelector('img').alt
+        }));
+
+        const openModal = (index) => {
+            currentIndex = index;
+            updateModalContent();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        };
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        const updateModalContent = () => {
+            modalImg.style.opacity = '0';
+            setTimeout(() => {
+                modalImg.src = images[currentIndex].src;
+                modalImg.alt = images[currentIndex].alt;
+                modalCaption.textContent = images[currentIndex].alt;
+                modalImg.style.opacity = '1';
+            }, 200);
+        };
+
+        const nextImage = () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateModalContent();
+        };
+
+        const prevImage = () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateModalContent();
+        };
+
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => openModal(index));
+        });
+
+        modalClose.addEventListener('click', closeModal);
+        modalPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            prevImage();
+        });
+        modalNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            nextImage();
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('active')) return;
+
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
         });
     </script>
 </body>
